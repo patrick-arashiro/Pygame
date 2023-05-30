@@ -109,7 +109,7 @@ class Moeda(pygame.sprite.Sprite):
 
         # Verifica se colidiu com o carro
         if pygame.sprite.collide_rect(self, carro):
-            sound_moeda.play()
+            #sound_moeda.play()
             self.renasce()
 
         # Verifica se a moeda saiu da tela
@@ -141,6 +141,7 @@ clock = pygame.time.Clock()
 # Loop principal do jogo
 while True:
     # Verifica eventos
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
